@@ -25,6 +25,7 @@ pipeline {
                 script {
                     // Archive the JAR file as a build artifact
                     archiveArtifacts artifacts: 'SimpleJavaProject.jar', fingerprint: true
+                     cp -r /var/jenkins_home/workspace/mc1 /app/data/mc1
                 }
             }
         }
