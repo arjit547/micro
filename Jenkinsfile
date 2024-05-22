@@ -25,7 +25,15 @@ pipeline {
                 script {
                     // Archive the JAR file as a build artifact
                     archiveArtifacts artifacts: 'SimpleJavaProject.jar', fingerprint: true
-                     
+                }
+            }
+        }
+
+        stage('Copy to Specific Location') {
+            steps {
+                script {
+                    // Copy the project directory to a specific location
+                    sh 'cp -r /var/jenkins_home/workspace/mc1 /app/data/mc1'
                 }
             }
         }
