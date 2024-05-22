@@ -20,7 +20,7 @@ pipeline {
             }
         }
 
-        stage('Archive and Copy to Local') {
+        stage('Archive') {
             steps {
                 script {
                     // Archive the JAR file as a build artifact
@@ -29,9 +29,13 @@ pipeline {
                     // Define the local directory where you want to store the JAR file
                     def localDir = 'C:\\Users\\chauhanarjit\\Desktop\\jarfile'
 
-                    // Copy the JAR file to the local directory using Docker volume mounts
-                    docker.image('maven:latest').inside('-v ' + localDir + ':/host') {
-                        sh "cp SimpleJavaProject.jar /host"
+                    // Check if the system is Unix
+                    if (isUnix()) {
+                        // Copy the JAR file to the local directory using 'cp' command
+                        sh "cp SimpleJavaProject.jar ${localDir}"
+                    } else {
+                        // Copy the JAR file to the local directory using 'copy' command
+                        bat "copy SimpleJavaProject.jar ${localDir}"
                     }
                 }
             }
