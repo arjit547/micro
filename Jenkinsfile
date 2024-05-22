@@ -25,8 +25,6 @@ pipeline {
                 script {
                     // Archive the JAR file as a build artifact
                     archiveArtifacts artifacts: 'SimpleJavaProject.jar', fingerprint: true
-
-                    }
                 }
             }
         }
