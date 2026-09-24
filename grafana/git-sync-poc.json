@@ -20,7 +20,7 @@
       },
       "options": {
         "mode": "markdown",
-        "content": "# Grafana 13 Git Sync\n\nThis dashboard is managed through Git."
+        "content": "# Grafana 13 Git Sync\n\nUpdated directly from GitHub."
       }
     }
   ],
