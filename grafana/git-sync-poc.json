@@ -1,0 +1,44 @@
+{
+  "annotations": {
+    "list": []
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "links": [],
+  "panels": [
+    {
+      "id": 1,
+      "type": "text",
+      "title": "Git Sync Test",
+      "description": "Test panel for Grafana 13 Git Sync POC",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "options": {
+        "mode": "markdown",
+        "content": "# Grafana 13 Git Sync\n\nThis dashboard is managed through Git."
+      }
+    }
+  ],
+  "refresh": "",
+  "schemaVersion": 39,
+  "tags": [
+    "git-sync",
+    "poc"
+  ],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timezone": "browser",
+  "title": "Grafana Git Sync POC",
+  "uid": "grafana-git-sync-poc",
+  "version": 1
+}
